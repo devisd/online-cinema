@@ -180,7 +180,7 @@ input {
 .main-display__header {
     font-weight: 700;
     font-size: 2.4rem;
-    line-height: 1.17;
+    line-height: 1.5;
 }
 
 .main-display__date {
@@ -224,6 +224,7 @@ input {
     align-items: center;
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+    padding-right: 1rem;
 }
 
 .title__left,
@@ -232,13 +233,17 @@ input {
     align-items: center;
 }
 
-.title__left {
+.title__main {
     font-size: 2rem;
     line-height: 1.15;
 }
 
 .title__count {
+    margin-left: 2rem;
     color: rgba(255, 255, 255, 0.2);
+    font-size: 2rem;
+    line-height: 1.15;
+    padding-top: .3rem;
 }
 
 .title__right span {
@@ -248,8 +253,67 @@ input {
 }
 
 .title__right img {
-    width: .45rem;
-    height: .9rem;
+    width: 2rem;
+    height: 1.6rem;
+    margin-left: .4rem;
+}
+
+.trending {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1.6rem;
+}
+
+.trending__item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 47%;
+    height: 25.1rem;
+    border-radius: 1.6rem;
+    background: url('../img/trending1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.trending__footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 1rem;
+}
+
+.trending__plash {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.14;
+}
+
+.trending__header {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.trending__date {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.trending__time {
+    padding: .4rem 1.3rem;   
+    background: #FFFFFF;
+    border-radius: 16px;
+    font-size: 1.4rem;
+    line-height: 1.14;
+    color: #000000;
 }
 /* Grid */
 
