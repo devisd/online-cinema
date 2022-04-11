@@ -72,13 +72,17 @@ input {
     "my-aside my-main my-main"
     "my-aside my-main my-main";
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: 8rem 0;
+  gap: 3rem 0;
 }
 
 .grid-init {
   max-width: 144rem;
   margin: auto;
   padding: 3rem 2.4rem 4rem;
+}
+
+.header {
+  box-shadow: 0 .4rem 1rem rgba(255, 255, 255, 0.07);
 }
 
 .header__wrap {
@@ -153,6 +157,10 @@ input {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
+}
+
+.main-display {
+  padding-top: 5rem;
 }
 
 .main-display__trailer {
@@ -389,6 +397,34 @@ input {
 
 .aside {
   padding-right: 5.9rem;
+  position: relative;
+}
+
+.aside::after {
+  content: url('../img/aside-arrow.svg');
+  position: absolute;
+  top: 10.7rem;
+  right: 4.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.2rem;
+  height: 2.6rem;
+  background: #FCFCFE;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.aside__wrap {
+  background: rgba(255, 255, 255, 0.02);
+  margin-left: -2.4rem;
+}
+
+.aside__top {
+  padding: 5rem 2.3rem 4rem 2.4rem;
+  background: #171618;
+  border-right: .1rem solid #1C181F;
+
 }
 
 .aside__title {
@@ -456,7 +492,6 @@ input {
 
 .aside__item:nth-child(3) {
   margin-top: 3rem;
-  margin-bottom: 4rem;
 }
 
 .aside__views {
@@ -479,10 +514,7 @@ input {
 }
 
 .aside__bottom {
-  padding: 2.5rem 0 2rem 0;
-  width: 42rem;
-  height: 30rem;
-  background: rgba(255, 255, 255, 0.02);
+  padding: 2.5rem 0 2rem 2.4rem;
 }
 
 .aside__favourite-text {
@@ -527,6 +559,22 @@ input {
   margin-bottom: 6rem;
 }
 
+.aside__footer-bottom {
+  position: relative;
+}
+
+.aside__footer-bottom::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 0;
+  transform: translate(0, 50%);
+  display: block;
+  width: 6.5rem;
+  height: .1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .aside__add {
   display: flex;
   margin-bottom: 2rem;
@@ -544,6 +592,32 @@ input {
   border-radius: 50%;
   margin-right: .5rem;
   background: #2B2A2F;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3rem 0;
+  z-index: 1000;
+  display: none;
+}
+
+.modal__inner {
+  width: 100rem;
+  height: 60rem;
+}
+
+.active {
+  display: flex;
 }
 /* Grid */
 
